@@ -29,11 +29,12 @@
                     if ($conn->connect_error) {
                       die("Connection failed: " . $conn->connect_error);
                     }
-
+                    //find every category that is inserted in the database
                     $sql = 'SELECT category from books group by category';
                     $result = $conn->query($sql) or die(mysqli_error($conn));
                     while ( $row = $result->fetch_assoc() )
                     {
+                        //for every category make a progress bar in the dom
                         $count = "SELECT count(*) as total from books where category = '".$row['category']."'";
                         $result_count = $conn->query($count) or die(mysqli_error($conn));
                         $row_count = $result_count->fetch_assoc();
