@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="insert.php" method="POST">
+        <fieldset>
+         <legend>Book Info</legend>
+         <label for="title">Title:</label>
+         <input type="text" id="title" name="title" placeholder="Enter book's title"><br><br>
+         <label for="author">Author:</label>
+         <input type="text" id="author" name="author" placeholder="Enter book's author"><br><br>
+         <label for="description">Description:</label>
+         <textarea name="description" id="description" cols="35" rows="4" placeholder="Enter book's description"></textarea><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Categories</legend>
+            <label for="category">Choose a category:</label>
+            <select name="category" id="category">
+                <option value="Mystery">Mystery</option>
+                <option value="Drama">Drama</option>
+                <option value="Fantasy">Fantasy</option>
+            </select><br><br>
+           </fieldset>
+           <input type="submit" name="store" id="store" value="Store">
+           <button onclick="location.href='library.php'" type="button">
+            View e-library</button>
+       </form>
+</body>
+</html>

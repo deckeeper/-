@@ -1,0 +1,60 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.grid-container > div {
+    border: 1px dotted gray;
+}
+
+.item1 {
+    grid-column: 1 / span 2;
+}
+.item2 {
+    grid-column: 3 / span 2;
+}
+
+span {
+    color:#3d9970;
+}
+
+h2 {
+    color:#3d9970;
+}
+
+progress[value] {
+/* Reset the default appearance */
+-webkit-appearance: none;
+appearance: none;
+
+width: 250px;
+height: 20px;
+text-align: center;
+position:relative;
+}
+
+progress::-webkit-progress-bar {
+background-color: #c9c9c9;
+}
+progress::-webkit-progress-value {
+background-color: #3d9970;
+}
+progress::-moz-progress-bar {
+background-color: #3d9970;
+}
+
+progress:before {
+content: attr(data-label);
+font-size: 0.8em;
+vertical-align: 0;
+
+/*Position text over the progress bar */
+position:absolute;
+left:0;
+right:0;
+color:black;
+}
+
+.data{
+    padding: 10px;
+}
