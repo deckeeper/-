@@ -12,6 +12,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+//select books based on the selected category
   $sql = "SELECT * FROM books where category = '".$post->category."' ";
 
   $result = $conn->query($sql) or die(mysqli_error($conn));

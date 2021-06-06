@@ -15,6 +15,7 @@
         <div class="item1">
             <h2>Categories</h2><br>
             <div class="progress">
+                <!-- dynamically created the progress bars in case more categories needed to be added in the feauture -->
                 <?php 
                     $servername = "localhost";
                     $username = "panic";

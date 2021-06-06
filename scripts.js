@@ -1,4 +1,5 @@
 function retrieve_category_details(){
+//asynscronous call to the file retrieve_category_details.php so that we can retrieve every data we need based on the category dropdown
     let payload = {
     category: document.getElementById('category').value,
     };
@@ -14,6 +15,7 @@ function retrieve_category_details(){
     .then(function(data){ display_data(data) })
 }
 
+//function that displays data on the dom
 function display_data(data){
     const total = data.length;
     let authors = '';
@@ -32,6 +34,7 @@ function display_data(data){
     document.getElementById('authors').innerHTML=authors;
 }
 
+//event listeners for the above functions
 document.getElementById('category').addEventListener('change', (event) => {
     retrieve_category_details();
 });
